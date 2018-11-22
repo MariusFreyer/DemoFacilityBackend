@@ -1,6 +1,7 @@
 import { Document, Model } from "mongoose";
+import { IGenericService } from "./IGenericService";
 
-export abstract class GenericService {
+export abstract class GenericService implements IGenericService {
 
     private Model: Model<Document>
 
