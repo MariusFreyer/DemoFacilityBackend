@@ -7,7 +7,7 @@ import { IGenericService } from 'services/IGenericService';
 
 export class ResourceController implements IResourceController {
 
-    private service: IGenericService;
+    protected service: IGenericService;
 
     public constructor(service: IGenericService) {
         this.service = service;

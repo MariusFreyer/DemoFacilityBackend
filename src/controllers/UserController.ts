@@ -2,10 +2,14 @@ import { Request, Response } from 'express';
 import { Document } from 'mongoose';
 import { User } from '../models/User';
 import { IResourceController } from './IResourceController';
-import { userService } from '../services/UserService';
+import { userService, UserService } from '../services/UserService';
 import { ResourceController } from './ResourceController';
 
 export class UserController extends ResourceController {
+
+    public constructor(service: UserService) {
+        super(service);
+    }
 
     // /**
     //  * Returns a list of users
